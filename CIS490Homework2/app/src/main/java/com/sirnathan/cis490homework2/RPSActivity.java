@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.view.View;
 
 
 public class RPSActivity extends Activity {
@@ -14,6 +16,9 @@ public class RPSActivity extends Activity {
         setContentView(R.layout.activity_rps);
     }
 
+    public void buttonOnClick(View v){
+        Button goBtn=(Button) v;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

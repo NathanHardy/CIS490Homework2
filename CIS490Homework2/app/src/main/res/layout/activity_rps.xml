@@ -1,8 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -16,21 +15,34 @@
         android:layout_height="wrap_content"
         android:text="Rock"
         android:id="@+id/goBtn"
-        android:onClick="buttonOnClick" />
+        android:onClick="buttonOnClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Paper"
         android:id="@+id/paperBtn"
-        android:onClick="buttonOnClick" />
+        android:onClick="buttonOnClick"
+        android:layout_toEndOf="@+id/goBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/scissorsBtn" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Scissors"
         android:id="@+id/scissorsBtn"
-        android:onClick="buttonOnClick" />
+        android:onClick="buttonOnClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
-    
-</LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imgView"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/goBtn" />
+
+</RelativeLayout>

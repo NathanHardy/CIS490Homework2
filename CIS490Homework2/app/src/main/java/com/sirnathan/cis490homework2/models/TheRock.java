@@ -2,7 +2,7 @@ package com.sirnathan.cis490homework2.models;
 
 import android.graphics.Bitmap;
 import android.R;
-//import com.sirnathan.cis490homework2.R;
+import com.sirnathan.cis490homework2.R;
 import com.sirnathan.cis490homework2.utils.TextUtils;
 
 /**

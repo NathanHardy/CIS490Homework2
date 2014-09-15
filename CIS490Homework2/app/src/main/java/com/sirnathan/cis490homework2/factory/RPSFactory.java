@@ -18,7 +18,7 @@ public class RPSFactory {
     private RPSFactory() {}
     public static RPS getInstance() {
         Random randGen = new Random(new Date().getTime() + ++counter);
-        int val randGen.nextInt(4); // up to 4 exclusive
+        int val = randGen.nextInt(4); // up to 4 exclusive
         Log.d("rps", "rps number" + val);
         switch (val) {
             case 1:

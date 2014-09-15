@@ -17,7 +17,8 @@
         android:id="@+id/goBtn"
         android:onClick="buttonOnClick"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:clickable="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -38,11 +39,62 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imgView"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="You:"
+        android:id="@+id/textView"
+        android:layout_toStartOf="@+id/paperBtn"
         android:layout_alignParentTop="true"
-        android:layout_above="@+id/goBtn" />
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/goBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/paperBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/paperBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="The Machine: "
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toStartOf="@+id/textView3" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yourImgView"
+        android:layout_toEndOf="@+id/textView2"
+        android:src="@drawable/ic_launcher"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/machineImgView"
+        android:src="@drawable/ic_launcher"
+        android:layout_alignTop="@+id/yourImgView"
+        android:layout_alignEnd="@+id/textView3" />
 
 </RelativeLayout>

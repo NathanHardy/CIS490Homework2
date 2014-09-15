@@ -1,4 +1,5 @@
 package com.sirnathan.cis490homework2;
+//using image of Dwayne "The Rock" Johnson from http://en.wikipedia.org/wiki/Dwayne_Johnson retrieved on 9/14/2014
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -10,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.Toast;
-import android.R;
+//import android.R;
 
 import com.sirnathan.cis490homework2.factory.RPSFactory;
 import com.sirnathan.cis490homework2.models.RPS;
@@ -18,6 +19,7 @@ import com.sirnathan.cis490homework2.models.TheRock;
 import com.sirnathan.cis490homework2.models.Paper;
 import com.sirnathan.cis490homework2.models.Scissors;
 import com.sirnathan.cis490homework2.utils.TextUtils;
+import com.sirnathan.cis490homework2.R;
 
 public class RPSActivity extends Activity {
 
@@ -27,37 +29,46 @@ public class RPSActivity extends Activity {
         setContentView(R.layout.activity_rps);
 
         Button rockBtn = (Button)findViewById(R.id.rockBtnFinder);
-        rockBtn.setOnClickListener((view) -> {
-            RPS rps = RPSFactory.getInstance();
-            Toast toast = Toast.makeText(view.getContext(),rps.showResult(),Toast.LENGTH_LONG);
-            toast.show();
-            ImageView imageView = (ImageView) findViewById(R.id.yourImgView);
-            imageView.setImageResource(rps.showRPSImage());
+        rockBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RPS rps = RPSFactory.getInstance();
+                Toast toast = Toast.makeText(view.getContext(),rps.showResult(),Toast.LENGTH_LONG);
+                toast.show();
+                ImageView imageView = (ImageView) findViewById(R.id.yourImgView);
+                imageView.setImageResource(rps.showRPSImage());
+            }
         });
 
         Button paperBtn = (Button)findViewById(R.id.paperBtnFinder);
-        paperBtn.setOnClickListener((view) -> {
-            RPS rps = RPSFactory.getInstance();
-            Toast toast = Toast.makeText(view.getContext(),rps.showResult(),Toast.LENGTH_LONG);
-            toast.show();
-            ImageView imageView = (ImageView) findViewById(R.id.yourImgView);
-            imageView.setImageResource(rps.showRPSImage());
+        paperBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RPS rps = RPSFactory.getInstance();
+                Toast toast = Toast.makeText(view.getContext(),rps.showResult(),Toast.LENGTH_LONG);
+                toast.show();
+                ImageView imageView = (ImageView) findViewById(R.id.yourImgView);
+                imageView.setImageResource(rps.showRPSImage());
+            }
         });
 
         Button scissorsBtn = (Button)findViewById(R.id.scissorsBtnFinder);
-        scissorsBtn.setOnClickListener((view) -> {
-            RPS rps = RPSFactory.getInstance();
-            Toast toast = Toast.makeText(view.getContext(),rps.showResult(),Toast.LENGTH_LONG);
-            toast.show();
-            ImageView imageView = (ImageView) findViewById(R.id.yourImgView);
-            imageView.setImageResource(rps.showRPSImage());
+        scissorsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RPS rps = RPSFactory.getInstance();
+                Toast toast = Toast.makeText(view.getContext(),rps.showResult(),Toast.LENGTH_LONG);
+                toast.show();
+                ImageView imageView = (ImageView) findViewById(R.id.yourImgView);
+                imageView.setImageResource(rps.showRPSImage());
+            }
         });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.rps, menu);
+        getMenuInflater().inflate(R.menu.r, menu);
         return true;
     }
 

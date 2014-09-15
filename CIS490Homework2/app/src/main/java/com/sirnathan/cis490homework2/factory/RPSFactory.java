@@ -25,7 +25,7 @@ public class RPSFactory {
                 return new TheRock();
             case 2:
                 return new Paper();
-            case 3:
+            default:
                 return new Scissors();
         }
     }
